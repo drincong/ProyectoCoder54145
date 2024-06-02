@@ -8,15 +8,17 @@ class Curso (models.Model):
 
 class Estudiante (models.Model):
     nombre = models.CharField(max_length=30)
-    camada = models.IntegerField()
+    apellido = models.CharField(max_length=30, null = True)
+    email = models.EmailField(null=True)
 
-# class Profesor(models.Model):
-#     nombre: models.CharField(max_length=30)
-#     apellido: models.CharField(max_length=30)
-#     email: models.EmailField()
-#     profesion: models.CharField(max_length=30)
+class Profesor(models.Model):
+     
+    nombre= models.CharField(max_length=30)
+    apellido= models.CharField(max_length=30)
+    email= models.EmailField()
+    profesion= models.CharField(max_length=30)
 
-#class Entregable(models.Model):
-#     nombre: models.CharField(max_length=30)
-#     fechaDeEntrega: models.DateField()
-#     Entregado: modesl.BooleanField()
+class Entregable(models.Model):
+    nombre= models.CharField(max_length=30)
+    fechaDeEntrega= models.DateField()
+    Entregado= models.BooleanField()
